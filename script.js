@@ -1,11 +1,19 @@
-function add(tasks){
+function add(){
+
+    var counter = 1;
+
     //grab new task
     var task = document.getElementById("new-task");
     
     //create paragraph element and text node
     const text = document.createElement("p");
     text.className = "list-item"
-    const node = document.createTextNode(task.value);
+
+    var length = document.getElementsByClassName("list-item");
+
+    var number = length.length;
+    
+    const node = document.createTextNode((number+1)+")  ".toString()+task.value);
 
     text.appendChild(node);
     const element = document.getElementById("tasks-submitted");
