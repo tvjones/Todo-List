@@ -13,11 +13,15 @@ html,body{
 div#info{
     display: flex;
     justify-content: space-between;
+    height: 5%;
 }
 
 div#info button{
     background-color: rgb(221, 123, 123);
     border-color: transparent;
+    width: 20%;
+    height: 100%;
+    font-weight: bold;
 }
 
 div.container{
@@ -43,10 +47,12 @@ div.container{
 }
 
 .form input{
-    width: 70%;
+    width: 60%;
     height: 100%;
     border-radius: 0;
     border-color: transparent;
+    padding: 0 2rem;
+    font-size: 1rem;
 }
 
 .form button{
@@ -55,6 +61,8 @@ div.container{
     border-radius: 0;
     border-color: transparent;
     background-color: rgb(130, 199, 130);
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .form button:hover{
@@ -68,9 +76,31 @@ div#tasks-submitted{
 
 div#tasks-submitted p{
     margin-top: 1.5rem;
+    font-size: 1rem;
 }
 
 
 #tasks-submitted p:hover{
     cursor: pointer;
+}
+
+@media screen and (max-width:800px) {
+    html{
+        font-size: 10px;
+    }
+
+    .form input{
+        width: 50%;
+    }
+    
+    .form button{
+        width: 25%;
+        height: 100%;
+        border-radius: 0;
+        border-color: transparent;
+        background-color: rgb(130, 199, 130);
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
 }
