@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: blanchedalmond;
+    font-size: 14px;
+}
+
+div.container{
+    text-align: center;
+    top: 15%;
+    position: relative;
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container h1{
+    margin-bottom: 4rem;
+}
+
+.form{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.form input{
+    width: 70%;
+    height: 100%;
+    border-radius: 0;
+    border-color: transparent;
+}
+
+.form button{
+    width: 20%;
+    height: 100%;
+    border-radius: 0;
+    border-color: transparent;
+    background-color: rgb(130, 199, 130);
+}
+
+.form button:hover{
+    cursor: pointer;
+}
+
+div#tasks-submitted{
+    margin-top: 3rem;
+    height: 90%;
+}
+
+div#tasks-submitted p{
+    margin-top: 1.5rem;
+}
+
+
+#tasks-submitted p:hover{
+    cursor: pointer;
+}

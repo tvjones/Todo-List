@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter a task and I'll keep it here for you!</h1>
+        <div class="form">
+            <input id="new-task" type="text">
+            <button id ="add-task" type="submit" onclick="add()">Add</button>
+        </div>
+        <strong>*click a task to mark it as complete*</strong>
+        <div id="tasks-submitted"></div>
+
+        </div>
+    </div>
+    <footer>
+        <script src="script.js"></script>
+    </footer>
+</body>
+</html>
