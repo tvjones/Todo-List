@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    /* Uncomment the line below to see easy outlines for debugging */
+    /* outline: 1px #111 dotted; */
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+
+    /* Set font size here and use relatives across other styles (em, rem) */
+    /* Also take note of how I use em for text and rem for other things */
+    font-size: 14px;
+}
+
+div.container {
+    top: 15%;
+    width: 60%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    font-family: 'Roboto', sans-serif;
+}
+
+div.usage {
+    padding: 1rem;
+    margin: 2rem 0;
+    width: 100%;
+}
+
+div.usage ul {
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.usage ul li {
+    padding: 0.5rem;
+    font-size: 0.9em;
+}
+
+div.form {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: min-content;
+}
+
+div.form input#new-task {
+    flex: 1;
+    padding: 2rem;
+    outline: none;
+    border-radius: 1rem;
+    border: 1px solid rgba(10, 10, 10, 0.1);
+    box-shadow: 0 0.25rem 1rem rgba(100, 100, 100, 0.1);
+}
+
+div.form button#add-task {
+    background: #27ae60;
+    color: #fff;
+    margin: 0 1rem;
+    padding: 1rem;
+    right: 0;
+    top: 0;
+}
+
+button#delete-tasks {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    padding: 1rem;
+    color: #fff;
+    background: #eb4d4b;
+}
+
+button.btn {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    border-radius: 100%;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+div#task-list {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-top: 5rem;
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+
+div#task-list * {
+    margin: 0.5rem 0;
+    padding: 1rem;
+}
