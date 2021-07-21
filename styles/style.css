@@ -19,9 +19,12 @@ div#info{
 div#info button{
     background-color: rgb(221, 123, 123);
     border-color: transparent;
-    width: 20%;
-    height: 100%;
+    width: 10%;
+    height: 10%;
     font-weight: bold;
+    position: fixed;
+    right: 2rem;
+    cursor: pointer;
 }
 
 div.container{
