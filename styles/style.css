@@ -6,7 +6,7 @@
 html,body{
     height: 100%;
     width: 100%;
-    background-color: blanchedalmond;
+    background-color: rgb(233, 227, 220);
     font-size: 14px;
 }
 
@@ -20,7 +20,7 @@ div#info button{
     background-color: rgb(221, 123, 123);
     border-color: transparent;
     width: 10%;
-    height: 10%;
+    height: 5%;
     font-weight: bold;
     position: fixed;
     right: 2rem;
@@ -58,14 +58,10 @@ div.container{
     font-size: 1rem;
 }
 
-.form button{
-    width: 20%;
+.form ion-icon{
+    width: 10%;
     height: 100%;
-    border-radius: 0;
-    border-color: transparent;
-    background-color: rgb(130, 199, 130);
-    font-size: 1rem;
-    font-weight: bold;
+    cursor: pointer;
 }
 
 .form button:hover{
@@ -91,6 +87,13 @@ div#tasks-submitted p{
 #tasks-submitted p:hover{
     cursor: pointer;
 }
+
+ion-icon.add-task{
+    font-size: 2em;
+    color: green;
+}
+
+
 
 @media screen and (max-width:800px) {
     html{

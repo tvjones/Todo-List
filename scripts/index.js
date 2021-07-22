@@ -17,7 +17,12 @@ function saveToBrowserStorage(){
 }
 
 function loadFromBroswerStorage(){
-    tasks = JSON.parse((localStorage.getItem('tasks')));
+    if(localStorage.getItem('tasks') != null){
+        tasks = JSON.parse((localStorage.getItem('tasks')));
+    }
+    else{
+        tasks = [];
+    }
 }
 
 function addToList(task){
@@ -64,9 +69,11 @@ function addTask(){
 }
 
 function renderListOnLoad(){
-    for(let i=0; i < tasks.length; i++){
-        addToList(tasks[i])
-    }
+    if(tasks != null){
+        for(let i=0; i < tasks.length; i++){
+            addToList(tasks[i])
+        }
+    } 
 }
 
 function checkUnfinished(){

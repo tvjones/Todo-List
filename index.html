@@ -15,16 +15,18 @@
         <h1>Enter a task and I'll keep it here for you!</h1>
         <div class="form">
             <input id="new-task" type="text">
-            <button id ="add-task" type="submit" onclick="addTask()">Add</button>
+            <ion-icon class="add-task" onclick="addTask()" name="add-outline"></ion-icon>
         </div>
         <div id="info">
             <strong>*click a task to mark it as complete*</strong>
-            <button type="reset" onclick="clearList()">Clear List</button>
+            <button type="reset" onclick="clearList()">Clear List <ion-icon class="clear-tasks" name="trash-outline"></ion-icon></button>
         </div>
         <div id="tasks-submitted"></div>
 
         </div>
     </div>
     <script src="scripts/index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
