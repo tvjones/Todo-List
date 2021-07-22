@@ -110,16 +110,13 @@ ion-icon.add-task{
 
 
 @media screen and (max-width:800px) {
-    html{
-        font-size: 10px;
-    }
-
+    
     .form input{
-        width: 50%;
+        width: 90%;
     }
     
     .form button{
-        width: 25%;
+        width: 10%;
         height: 100%;
         border-radius: 0;
         border-color: transparent;
