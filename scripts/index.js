@@ -41,9 +41,10 @@ function addToList(task){
     text.addEventListener( 'click', function(){
         text.style.textDecoration = "line-through"
         text.style.color="red";
+        checkFinished();
+        displayStatus();
     });
 
-    text.addEventListener('click', checkUnfinished);
 
     if(task.status == 'finished'){
         text.style.textDecoration = "line-through"
@@ -60,12 +61,14 @@ function clearList(){
     }
     tasks = []
     localStorage.clear();
+    displayStatus();
 }
 
 function addTask(){
     getNewTask();
     saveToBrowserStorage();
     addToList(tasks[tasks.length-1]);
+    displayStatus();
 }
 
 function renderListOnLoad(){
@@ -73,10 +76,11 @@ function renderListOnLoad(){
         for(let i=0; i < tasks.length; i++){
             addToList(tasks[i])
         }
-    } 
+    }
+    displayStatus();
 }
 
-function checkUnfinished(){
+function checkFinished(){
     const listItems = document.getElementsByClassName('list-item');
     for(let i=0; i < listItems.length; i++){
         if (listItems[i].style.color == 'red' && listItems[i].style.textDecoration == "line-through"){
@@ -85,6 +89,27 @@ function checkUnfinished(){
     }
     saveToBrowserStorage();
 }
+
+
+//displays the number of tasks that are active and the number of tasks that are completed.
+function displayStatus(){
+    var active = 0;
+    var complete = 0;
+
+    if(tasks!=null){
+        for(let i=0; i<tasks.length; i++){
+            if(tasks[i].status == 'finished'){
+                complete++;
+            }
+            else{
+                active++;
+            }
+        }
+    }
+    let element = document.getElementById('status');
+    (element.children[0]).innerHTML = "Active - "+ active.toString();
+    (element.children[1]).innerHTML = "Complete - "+ complete.toString();
+}   
 
 loadFromBroswerStorage();
 renderListOnLoad();
