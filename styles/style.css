@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html,body{
@@ -40,10 +41,10 @@ div#info button{
 
 div.container{
     text-align: center;
-    top: 15%;
+    padding-top: 15%;
     position: relative;
     width: 60%;
-    height: 100%;
+    height: auto;
     margin: auto;
     font-family: 'Roboto', sans-serif;
 }
@@ -56,7 +57,7 @@ div.container{
 
 .form{
     width: 100%;
-    height: 10%;
+    height: 5rem;
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
@@ -83,7 +84,6 @@ div.container{
 
 div#tasks-submitted{
     margin-top: 3rem;
-    height: 90%;
     width: 100%;
 }
 
