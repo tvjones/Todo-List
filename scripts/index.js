@@ -1,5 +1,12 @@
 //stores unfinished tasks
 let tasks = []
+let inputField = document.getElementById('new-task');
+
+inputField.addEventListener( 'keyup', (event) =>{
+    if(event.keyCode == 13){
+        addTask();
+    }
+  }); 
 
 function getNewTask(){
     //task entered
@@ -39,12 +46,20 @@ function addToList(task){
 
     //strikes through paragraph elements (tasks) on click
     text.addEventListener( 'click', function(){
-        text.style.textDecoration = "line-through"
-        text.style.color="red";
+        //text.style.textDecoration = "line-through"
+        //text.style.color="red";
         checkFinished();
         displayStatus();
+        if(text.style.textDecoration != 'line-through'){
+            text.style.textDecoration = 'none';
+            text.style.color="white";
+        }
+        else{
+            text.style.textDecoration = 'line-through';
+            text.style.color='red';
+        }
+      
     });
-
 
     if(task.status == 'finished'){
         text.style.textDecoration = "line-through"
@@ -89,7 +104,6 @@ function checkFinished(){
     }
     saveToBrowserStorage();
 }
-
 
 //displays the number of tasks that are active and the number of tasks that are completed.
 function displayStatus(){
