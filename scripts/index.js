@@ -51,12 +51,12 @@ function addToList(task){
         checkFinished();
         displayStatus();
         if(text.style.textDecoration != 'line-through'){
-            text.style.textDecoration = 'none';
-            text.style.color="white";
+            text.style.textDecoration = 'line-through';
+            text.style.color="red";
         }
         else{
-            text.style.textDecoration = 'line-through';
-            text.style.color='red';
+            text.style.textDecoration = 'none';
+            text.style.color='white';
         }
       
     });
