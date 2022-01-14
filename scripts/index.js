@@ -48,8 +48,6 @@ function addToList(task){
     text.addEventListener( 'click', function(){
         //text.style.textDecoration = "line-through"
         //text.style.color="red";
-        checkFinished();
-        displayStatus();
         if(text.style.textDecoration != 'line-through'){
             text.style.textDecoration = 'line-through';
             text.style.color="red";
@@ -58,7 +56,8 @@ function addToList(task){
             text.style.textDecoration = 'none';
             text.style.color='white';
         }
-      
+        checkFinished();
+        displayStatus();
     });
 
     if(task.status == 'finished'){
@@ -100,6 +99,9 @@ function checkFinished(){
     for(let i=0; i < listItems.length; i++){
         if (listItems[i].style.color == 'red' && listItems[i].style.textDecoration == "line-through"){
             tasks[i].status = 'finished'
+        }
+        else{
+            tasks[i].status = 'unfinished'
         }
     }
     saveToBrowserStorage();
